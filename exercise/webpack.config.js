@@ -45,7 +45,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.vue', '.json'] // import 등에서 확장자를 붙이지 않아도 인식함
   },
   devServer: {
     historyApiFallback: true,
@@ -58,6 +58,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 
+// webpack version 4 에서는 아래의 정의 대신 mode option으로 대체
 // if (process.env.NODE_ENV === 'production') {
 //   module.exports.devtool = '#source-map'
 //   // http://vue-loader.vuejs.org/en/workflow/production.html
